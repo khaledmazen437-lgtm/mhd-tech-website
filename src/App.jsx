@@ -6,7 +6,6 @@ import { diplomas } from './data';
 import DiplomaDetails from './DiplomaDetails';
 import AboutPage from './AboutPage';
 
-// --- TiltCard Component ---
 const TiltCard = ({ item }) => {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
@@ -38,7 +37,7 @@ const TiltCard = ({ item }) => {
     >
       <div className="h-full bg-white/80 backdrop-blur-xl border border-purple-100 p-8 rounded-3xl shadow-xl group hover:border-purple-400/50 transition-all duration-500 flex flex-col relative overflow-hidden transform-gpu hover:shadow-purple-200/50">
         <div className="absolute inset-0 bg-gradient-to-br from-purple-100/50 via-pink-100/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-        
+
         <div className="mb-6 p-4 bg-purple-50 rounded-2xl w-fit group-hover:bg-purple-100 group-hover:scale-110 transition-all duration-300 shadow-sm ring-1 ring-purple-100" style={{ transform: "translateZ(20px)" }}>
           {item.icon}
         </div>
@@ -58,12 +57,11 @@ const TiltCard = ({ item }) => {
   );
 };
 
-// --- TechMarquee Component ---
 const TechMarquee = () => {
   const techs = ["PYTHON", "REACT.JS", "AI & ML", "CYBER SECURITY", "FLUTTER", "NODE.JS", "DEVOPS", "AUTOMATION", "DOCKER", "NEXT.JS"];
   return (
     <div className="w-full bg-white/90 border-b border-purple-100 py-3 overflow-hidden fixed top-0 left-0 z-50 shadow-sm backdrop-blur-md">
-      <motion.div 
+      <motion.div
         className="flex gap-12 whitespace-nowrap"
         animate={{ x: [0, -1000] }}
         transition={{ repeat: Infinity, duration: 25, ease: "linear" }}
@@ -78,7 +76,6 @@ const TechMarquee = () => {
   );
 };
 
-// --- Footer Component ---
 const Footer = () => {
   const socialLinks = [
     { icon: <MessageCircle size={20} />, url: "https://chat.whatsapp.com/IJQ1XlYMUfJB0Wy53nEXQX", color: "hover:text-green-600 hover:bg-green-50 hover:border-green-200" },
@@ -99,10 +96,10 @@ const Footer = () => {
             </div>
             <div className="flex justify-center gap-6 mb-8">
                 {socialLinks.map((link, idx) => (
-                    <a 
-                        key={idx} 
-                        href={link.url} 
-                        target="_blank" 
+                    <a
+                        key={idx}
+                        href={link.url}
+                        target="_blank"
                         rel="noopener noreferrer"
                         className={`p-3 bg-white rounded-full border border-purple-100 text-slate-400 transition-all duration-300 hover:scale-110 hover:shadow-md ${link.color}`}
                     >
@@ -118,7 +115,6 @@ const Footer = () => {
   );
 };
 
-// --- HomePage Component ---
 const HomePage = () => {
   const texts = ["مهندسين محترفين.", "قادة للمستقبل.", "مبتكرين."];
   const [index, setIndex] = useState(0);
@@ -139,7 +135,7 @@ const HomePage = () => {
 
   return (
     <div className="min-h-screen bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-100 via-slate-50 to-white text-slate-900 font-sans overflow-x-hidden selection:bg-purple-200 selection:text-purple-900" dir="rtl">
-      
+
       <TechMarquee />
 
       <div className="fixed inset-0 z-0 pointer-events-none">
@@ -150,8 +146,8 @@ const HomePage = () => {
       {/* Hero Section */}
       <header className="relative z-10 pt-40 pb-20 text-center overflow-hidden">
         <div className="container mx-auto px-6">
-          
-          <motion.div 
+
+          <motion.div
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
@@ -164,7 +160,7 @@ const HomePage = () => {
             الدفعة الجديدة مفتوحة الآن لعام 2026
           </motion.div>
 
-          <motion.h1 
+          <motion.h1
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             className="text-6xl md:text-8xl font-black mb-6 tracking-tight text-slate-900"
@@ -172,11 +168,10 @@ const HomePage = () => {
             MHD <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-fuchsia-500 to-pink-600">Tech</span>
           </motion.h1>
 
-  
           <div className="h-auto min-h-[4rem] mb-10 md:mb-6">
              <h2 className="text-3xl md:text-5xl font-bold text-slate-700 leading-tight">
                نحن لا نعلم البرمجة، نحن نصنع <br className="md:hidden" />
-               <motion.span 
+               <motion.span
                  key={index}
                  initial={{ opacity: 0, y: 20 }}
                  animate={{ opacity: 1, y: 0 }}
@@ -193,7 +188,7 @@ const HomePage = () => {
           </p>
 
           <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
-            <button 
+            <button
                 onClick={scrollToDiplomas}
                 className="px-10 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white rounded-full font-bold text-lg shadow-lg shadow-purple-200 transition-all hover:scale-105 flex items-center gap-2"
             >
@@ -213,7 +208,7 @@ const HomePage = () => {
       <section className="py-12 border-y border-purple-100 bg-white/50 backdrop-blur-sm">
         <div className="container mx-auto px-6 flex flex-wrap justify-center gap-10 md:gap-20 text-center">
             {[
-                
+
                 { num: "100%", label: "تطبيق عملي" },
                 { num: "+5", label: "مسارات تخصصية" }
             ].map((stat, idx) => (
@@ -232,7 +227,7 @@ const HomePage = () => {
             <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full shadow-sm"></div>
             <p className="text-slate-600 mt-4 font-medium">اختر مسارك وانضم لنخبة المهندسين</p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 perspective-1000">
           {diplomas.map((item, index) => (
             <TiltCard key={item.id} item={item} />
