@@ -4,49 +4,49 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Rocket, Facebook, Instagram, Linkedin, Globe, MessageCircle, Clock, ShieldCheck, Lightbulb, Target, Zap, Users } from 'lucide-react';
 
 const AboutPage = () => {
-  
+
   const socialLinks = [
-    { 
-      name: "مجتمع الواتساب", 
-      icon: <MessageCircle size={24} />, 
-      url: "https://chat.whatsapp.com/IJQ1XlYMUfJB0Wy53nEXQX", 
-      color: "hover:bg-green-50 text-green-600 border-green-200" 
+    {
+      name: "مجتمع الواتساب",
+      icon: <MessageCircle size={24} />,
+      url: "https://chat.whatsapp.com/IJQ1XlYMUfJB0Wy53nEXQX",
+      color: "hover:bg-green-50 text-green-600 border-green-200"
     },
-    { 
-      name: "فيسبوك", 
-      icon: <Facebook size={24} />, 
-      url: "https://www.facebook.com/share/17fPb3Unhs/", 
-      color: "hover:bg-blue-50 text-blue-600 border-blue-200" 
+    {
+      name: "فيسبوك",
+      icon: <Facebook size={24} />,
+      url: "https://www.facebook.com/share/17fPb3Unhs/",
+      color: "hover:bg-blue-50 text-blue-600 border-blue-200"
     },
-    { 
-      name: "لينكد إن", 
-      icon: <Linkedin size={24} />, 
-      url: "https://www.linkedin.com/in/mazen-khaled-00aabb375?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", 
-      color: "hover:bg-blue-50 text-blue-700 border-blue-200" 
+    {
+      name: "لينكد إن",
+      icon: <Linkedin size={24} />,
+      url: "https://www.linkedin.com/in/mazen-khaled-00aabb375?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      color: "hover:bg-blue-50 text-blue-700 border-blue-200"
     },
-    { 
-      name: "انستجرام", 
-      icon: <Instagram size={24} />, 
-      url: "https://www.instagram.com/mhdte.ch?igsh=MW1uMW1jOWtzZ2lxaQ==", 
-      color: "hover:bg-pink-50 text-pink-600 border-pink-200" 
+    {
+      name: "انستجرام",
+      icon: <Instagram size={24} />,
+      url: "https://www.instagram.com/mhdte.ch?igsh=MW1uMW1jOWtzZ2lxaQ==",
+      color: "hover:bg-pink-50 text-pink-600 border-pink-200"
     },
-    { 
-      name: "الموقع الرسمي", 
-      icon: <Globe size={24} />, 
-      url: "https://mhd-tech.netlify.app/?fbclid=Iwb21leAPLNYdjbGNrA8s1g2V4dG4DYWVtAjExAHNydGMGYXBwX2lkDDM1MDY4NTUzMTcyOAABHkdTG6h_-_wHYBcTZrIEFsYpz_WvBDdnmCc4Mz91MKkoZv6CSz3do0u7YmMm_aem_vdb_b1k9NU5OhKOZvkcpwQ", 
-      color: "hover:bg-purple-50 text-purple-600 border-purple-200" 
+    {
+      name: "الموقع الرسمي",
+      icon: <Globe size={24} />,
+      url: "https://mhd-tech.netlify.app/?fbclid=Iwb21leAPLNYdjbGNrA8s1g2V4dG4DYWVtAjExAHNydGMGYXBwX2lkDDM1MDY4NTUzMTcyOAABHkdTG6h_-_wHYBcTZrIEFsYpz_WvBDdnmCc4Mz91MKkoZv6CSz3do0u7YmMm_aem_vdb_b1k9NU5OhKOZvkcpwQ",
+      color: "hover:bg-purple-50 text-purple-600 border-purple-200"
     },
   ];
 
   return (
-    // ✅ خلفية مووف فاتحة متدرجة
+
     <div className="min-h-screen bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-100 via-slate-50 to-white text-slate-900 font-sans selection:bg-purple-200 selection:text-purple-900 overflow-x-hidden" dir="rtl">
-      
+
       {/* Navbar Light Mauve */}
       <nav className="px-6 py-4 border-b border-purple-100 flex justify-between items-center bg-white/80 backdrop-blur-md sticky top-0 z-50">
         <Link to="/" className="text-slate-500 hover:text-slate-900 flex items-center gap-2 transition-colors group">
             <div className="bg-purple-50 p-2 rounded-full group-hover:bg-purple-100 transition-colors text-purple-600">
-                <ArrowRight size={20} /> 
+                <ArrowRight size={20} />
             </div>
             <span className="font-bold">العودة للرئيسية</span>
         </Link>
@@ -59,7 +59,7 @@ const AboutPage = () => {
         <div className="absolute top-10 left-10 w-72 h-72 bg-purple-200/40 rounded-full blur-[100px] mix-blend-multiply" />
         <div className="absolute bottom-10 right-10 w-72 h-72 bg-pink-200/40 rounded-full blur-[100px] mix-blend-multiply" />
 
-        <motion.div 
+        <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             className="relative z-10 max-w-5xl mx-auto"
@@ -81,10 +81,10 @@ const AboutPage = () => {
 
       {/* Main Content */}
       <div className="container mx-auto px-6 py-12 space-y-32">
-        
+
         {/* Section 1: The Vision Story */}
         <section className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-            <motion.div 
+            <motion.div
                 initial={{ x: 50, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 viewport={{ once: true }}
@@ -108,14 +108,14 @@ const AboutPage = () => {
                     </div>
                 </div>
             </motion.div>
-            
+
             <div className="grid grid-cols-1 gap-6">
                 {[
                     { title: "الرؤية الاستباقية", desc: "كيان تأسس قبل المرحلة الجامعية ليكون سابقاً بخطوة.", icon: <Lightbulb className="text-yellow-500" />, bg: "bg-yellow-50" },
                     { title: "الدفعة الأولى", desc: "نحن نجهز الآن لإطلاق أقوى دفعة تأسيسية في تاريخ الشركة.", icon: <Rocket className="text-purple-500" />, bg: "bg-purple-50" },
                     { title: "الجودة الهندسية", desc: "نتبنى معايير Silicon Valley في التعليم والتطوير منذ اللحظة الأولى.", icon: <ShieldCheck className="text-green-500" />, bg: "bg-green-50" }
                 ].map((card, idx) => (
-                    <motion.div 
+                    <motion.div
                         key={idx}
                         whileHover={{ x: -10 }}
                         className="bg-white p-6 rounded-2xl border border-purple-100 flex items-start gap-4 shadow-md hover:shadow-lg transition-all"
@@ -134,14 +134,14 @@ const AboutPage = () => {
         <section className="relative my-24">
              <div className="bg-white/80 backdrop-blur-md border border-purple-100 p-8 md:p-12 rounded-[3rem] flex flex-col md:flex-row gap-12 items-center shadow-2xl shadow-purple-100/50 relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-purple-50 to-pink-50 opacity-50 -z-10" />
-                
+
                 {/* Founder Image */}
                 <div className="shrink-0 relative group w-full md:w-auto flex justify-center">
                      <div className="absolute inset-0 bg-gradient-to-br from-purple-400 to-pink-500 rounded-[2rem] blur-xl opacity-30 group-hover:opacity-60 transition-opacity duration-500" />
                     <div className="w-64 h-80 md:w-72 md:h-96 relative z-10 rounded-[2rem] overflow-hidden border-4 border-white shadow-2xl">
-                        <img 
-                            src="/mazen.jpeg" 
-                            alt="Eng. Mazen Khaled" 
+                        <img
+                            src="/mazen.jpeg"
+                            alt="Eng. Mazen Khaled"
                             className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent"></div>
@@ -160,9 +160,9 @@ const AboutPage = () => {
                             <span className="text-purple-700 font-bold text-sm tracking-wide">SOFTWARE ENGINEER & VISIONARY FOUNDER</span>
                         </div>
                     </div>
-                    
+
                     <p className="text-slate-600 text-lg leading-loose font-medium">
-                        مهندس برمجيات ورائد أعمال تقني. مؤسس <strong>MHD Tech</strong>. 
+                        مهندس برمجيات ورائد أعمال تقني. مؤسس <strong>MHD Tech</strong>.
                         شاب يمتلك رؤية طموحة لتغيير واقع التعليم التقني في مصر. يؤمن بأن "المهندس" الحقيقي يُصنع من خلال التحديات والمشاريع الحقيقية، وليس النظريات فقط.
                     </p>
 
@@ -187,7 +187,7 @@ const AboutPage = () => {
                 <div className="w-24 h-1 bg-purple-500 mx-auto rounded-full"></div>
                 <p className="text-slate-600 mt-4 font-medium">نحن نجهز لشيء استثنائي، كونوا مستعدين..</p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                 {[
                     { title: "منهج حصري", text: "محتوى يُدرس لأول مرة", color: "text-blue-600", bg: "bg-blue-50", icon: <Target /> },
@@ -210,7 +210,7 @@ const AboutPage = () => {
             <p className="text-slate-600 mb-12 max-w-2xl mx-auto text-lg font-medium">
                 تابعنا الآن. الإعلان عن فتح باب التقديم للدفعة الأولى سيكون قريباً جداً وحصرياً لمتابعينا.
             </p>
-            
+
             <div className="flex flex-wrap justify-center gap-6">
                 {socialLinks.map((link, idx) => (
                     <motion.a
